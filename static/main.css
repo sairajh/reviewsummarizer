@@ -1,0 +1,133 @@
+/*@font-face {
+    font-family: 'Allura-Regular';
+    src: url('fonts/Allura-Regular.ttf') format('truetype');
+}*/
+body{
+  background-color: #a8d0e6;
+  max-width: screen.width;
+  max-height: screen.height;
+
+}
+h1{
+  /*font-family: Allura-Regular;*/
+  font-size: 100px;
+  font-weight: bold;
+  color: #24305e;
+  text-align: center;
+  
+}
+h3{
+  
+  font-weight: bold;
+  color: #24305e;
+  text-align: center;
+  
+}
+#topcontent{
+  padding-top: 4%;
+  background-color: #f76c6c;
+}
+
+#link{
+  width: 85%;
+  margin-left: 5%;
+  margin-top: 1%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  border-style: none;
+  font-size: 100%;
+  padding-left: 10px;
+  box-shadow: 1px 1px 7px grey;
+}
+#submit{
+  position: absolute;
+  margin-right: 5%;
+  width: 6%;
+  margin-left: -5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #24305e;
+  margin-top: 1%;
+  color: white;
+  height: 50px;
+  font-size: 100%;
+  border-style: none;
+  box-shadow: 1px 1px 7px grey;
+}
+#description{
+  margin-left: 5%;
+  width: 30%;
+  border-radius: 10px;
+  background-color: #24305e;
+  margin-top: 1%;
+  font-size: 100%;
+  height: 50px;
+  color: white;
+  border-style: none;
+  box-shadow: 1px 1px 7px grey;
+}
+#abstract{
+  width: 30%;
+  border-radius: 10px;
+  background-color: #24305e;
+  margin-top: 1%;
+  font-size: 100%;
+  font-style: bold;
+  height: 50px;
+  color: white;
+  border-style: none;
+  box-shadow: 1px 1px 7px grey;
+}
+#extract{
+  width: 30%;
+  border-radius: 10px;
+  color: white;
+  background-color: #24305e;
+  border-style: none;
+  height: 50px;
+  font-size: 100%;
+  margin-top: 1%;
+  box-shadow: 1px 1px 7px grey;
+}
+.content{
+}
+.panel{
+  margin-top: 1%;
+  margin-left: 5%;
+  width: 91%;
+  padding-left: 5px;
+  border-left-color: #24305e;
+  border-left-width: 5px;
+  box-shadow: 1px 1px 7px grey;
+}
+#footer {
+   position:fixed;
+   bottom:0;
+   width:100%;
+   padding-left: 5%;
+   margin-bottom: 0.5%;
+}
+dl.decision-tree dl {
+  margin:3px 0px;
+}
+
+dl.decision-tree dd {
+  margin:3px 0px 3px 20px;
+}
+
+dl.decision-tree dd.collapsed {
+  display:none;
+}
+
+dl.decision-tree dt:before {
+  content:"-";
+  display:inline-block;
+  width:10px;
+  font-weight:bold; font-size:65%;
+}
+
+dl.decision-tree dt.collapsed:before {
+  content:"+";
+}

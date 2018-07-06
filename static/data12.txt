@@ -1,0 +1,88 @@
+{
+"ProductDescriptionTab" : [{ 
+
+"ProductName" : "Apple iPhone X (Silver, 256GB)", 
+
+"ProductDescription" : "['14.73 centimeters (5.8-inch) capacitive touchscreen with 2436 x 1125 pixels resolution', 'iOS v11.1.1 operating system with 1.3GHz Apple A11 Bionic hexa core processor, 3GB RAM, 256GB internal memory and single SIM', '2716mAH lithium-ion battery', '1 year manufacturer warranty for device and in-box accessories including batteries from the date of purchase']" , 
+
+"image_link" : "https://images-eu.ssl-images-amazon.com/images/I/41yHmwJxbIL._SY300_QL70_.jpg"}] , 
+
+"ExtractiveSummaryTab" : [{
+"title" : "apple iphoneX",
+
+
+"product" : [
+    {
+      "category" : "phone", "percent" : "50.0%"
+    },{
+      "category" : "time", "percent" : "50.0%"
+    },{
+      "category" : "product", "percent" : "50.0%"
+    },{
+      "category" : "camera", "percent" : "50.0%"
+    },{
+      "category" : "feature", "percent" : "50.0%"
+    },{
+      "category" : "day", "percent" : "50.0%"
+    },{
+      "category" : "picture", "percent" : "53.84615384615385%"
+    },{
+      "category" : "display", "percent" : "53.333333333333336%"
+    },{
+      "category" : "charger", "percent" : "52.94117647058823%"
+    },{
+      "category" : "battery", "percent" : "52.63157894736842%"
+    },{
+      "category" : "price", "percent" : "52.38095238095238%"
+    },{
+      "category" : "device", "percent" : "52.17391304347826%"
+    },{
+      "category" : "service", "percent" : "52.0%"
+    },{
+      "category" : "year", "percent" : "51.851851851851855%"
+    },{
+      "category" : "touch", "percent" : "53.57142857142857%"
+    },{
+      "category" : "complaint", "percent" : "51.724137931034484%"
+    },{
+      "category" : "difference", "percent" : "51.61290322580645%"
+    },{
+      "category" : "way", "percent" : "51.515151515151516%"
+    },{
+      "category" : "screen", "percent" : "51.42857142857143%"
+    }
+    ]
+}] ,
+
+"tree" : [
+        { "topic0" : "phone","Subtopic0" : [{"SubtopicName" : "Nice phone"},{"SubtopicName" : "great phone"},{"SubtopicName" : "awesome phone"}]},
+
+    { "topic1" : "battery","Subtopic1" : [{"SubtopicName" : "good battery"}]},
+
+    { "topic2" : "experience","Subtopic2" : [{"SubtopicName" : "good experience"}]},
+
+    { "topic3" : "camera","Subtopic3" : [{"SubtopicName" : "front camera"}]},
+
+    { "topic4" : "product","Subtopic4" : [{"SubtopicName" : "great product"}]},
+
+    { "topic5" : "thing","Subtopic5" : [{"SubtopicName" : "only thing"}]},
+
+    { "topic6" : "network","Subtopic6" : [{"SubtopicName" : "cellular network"}]},
+
+    { "topic7" : "gamer","Subtopic7" : [{"SubtopicName" : "mobile gamer"}]},
+
+    { "topic8" : "hole","Subtopic8" : [{"SubtopicName" : "deep hole"}]},
+
+    { "topic9" : "device","Subtopic9" : [{"SubtopicName" : "great device"}]},
+
+    { "topic10" : "time","Subtopic10" : [{"SubtopicName" : "committed time"}]},
+
+    { "topic11" : "service","Subtopic11" : [{"SubtopicName" : "superb service"}]},
+
+    { "topic12" : "notch","Subtopic12" : [{"SubtopicName" : "little notch"}]},
+
+    { "topic13" : "interface","Subtopic13" : [{"SubtopicName" : "new interface"}]}
+
+]
+ 
+}

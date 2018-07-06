@@ -1,0 +1,19 @@
+{
+"title": "apple iphoneX",
+
+
+"product": [
+    {
+      "category": "easily cross deployable12333 ", "percent":"70%"
+    },
+    {
+      "category": "easily cross ", "percent":"40%"
+    },
+    {
+      "category": "easily ", "percent":"50%"
+    },
+    {
+      "category": "easily wsaewqa", "percent":"50%"
+    }
+  ]
+}

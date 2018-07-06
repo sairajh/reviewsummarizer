@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Shortify</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- button -->
+    
+<script> 
+  var boolx = 2;
+  var data1;
+     $(function() {
+      $('#submit').click(function() {
+        boolx = "1";
+        var user = $('#link').val();
+        $.ajax({
+            url: '/toNLP',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                data1 = JSON.parse(response);
+                boolx = data1.check;
+                $('#product_list').html('');
+                $('#tab1_list').html('');
+                $('#tab3_list').html('');
+                $('#tab3_top').html('');
+                $.each(data1.product, function (i, product) {
+              var option_cate = '<li><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;&nbsp;<b>' + product.category +'</b>&nbsp;&nbsp;&nbsp;&nbsp;'+ product.percent+'</li>';
+              $(option_cate).appendTo('#product_list');
+              });
+             
+              var tab1 = '<h4>' + data1.ProductName + '</h4><hr>'+ data1.ProductDescription + '<br><img src='+data1.image_link+'>';
+              $(tab1).appendTo('#tab1_list');
+
+              var tab3top = '<h4>' + data1.ProductName + '</h4><hr>';
+              $(tab3top).appendTo('#tab3_top');
+
+              
+              
+
+              $.each(data1.tree, function (i, tree) {
+              var temptab;
+
+              $.each(tree.subtopic, function (j, subtopic) {
+              temptab += '<dt>' + subtopic.SubtopicName +'</dt>';
+              });
+              var tab3 = '<dt>' + tree.topic +'</dt><dd><dl>'+ temptab
+              +'</dl></dd>';
+              $(tab3).appendTo('#tab3_list');
+              });
+
+              $("dl.decision-tree dd, dl.decision-tree dt").addClass("collapsed");
+              $("dl.decision-tree dt").click(function(event) {
+              $(event.target).toggleClass("collapsed");
+              $(event.target).next().toggleClass("collapsed");
+              }); 
+                
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+      });
+    });
+////////////////////////////////////////////////////////////////
+
+
+function check(){
+  if(boolx=='1'){
+    alert("Please wait we are summarizing for you...");
+  }
+  else if(boolx=='2'){
+    alert("Enter the URL...");
+  }
+}
+   </script>
+   
+<!-- function -->
+<script>
+   
+</script>
+</head>
+
+<body>
+   
+<div id="topcontent">
+  <h1>Shortify</h1>
+  <h3>Currently available for Amazon, Flipkart, Zomato</h3>
+
+<form class="form-signin"  role="form" id="formdata">
+        <input type="text" name="link" id="link" placeholder="Enter the link here...">
+        
+        
+        <button name="Submit" value="Submit" id="submit"><span class="glyphicon glyphicon-search"></button>
+</form>
+
+</div>
+
+<div ng-controller="myCtrl as ctrl" class="content">
+    <input type="button" ng-click="tab = 1" name="products" value="Description" id="description" onclick="check()">
+    <input type="button" ng-click="tab = 2" onclick="check()" name="Abstractive" value="Summary" id="abstract">
+    <input type="button" ng-click="tab = 3" name="Abstractive" onclick="check()" value="Topic Tree" id="extract"></button>
+  <div class="panel" ng-show="tab === 3">
+    <!--decision tree html-->
+    <dl class="decision-tree">
+        <div class="region3" id="tab3_top">
+      
+        </div>
+        <div class="region2" id="tab3_list">
+      
+        </div>
+    </dl>
+    <!---->
+  </div>
+  <div class="panel" ng-show="tab === 2">
+    <h4>Specialities</h4><hr>
+    <div class="region" id="product_list">
+      
+    </div>
+  </div>
+  <div class="panel" ng-show="tab === 1">
+    <div class="region1" id="tab1_list">
+      
+    </div>
+  </div>
+
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+app.config(['$interpolateProvider', function($interpolateProvider){
+    $interpolateProvider.startSymbol('[[');
+    $interpolateProvider.endSymbol(']]');
+}]);
+app.controller("myCtrl", function($scope) {
+   
+});
+ 
+</script>
+</body>
+</html>
